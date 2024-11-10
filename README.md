@@ -2,12 +2,6 @@
 
 <img src="https://stdgen.github.io/static/images/teaser.png" width="100%">
 
-<div class="content has-text-justified">
-            <video class="video" controls playsinlne style="width: 100%; display: block; margin: 0 auto;">
-              <source src="https://stdgen.github.io/static/videos/demo_.mp4" type="video/mp4">
-            </video>
-</div>
+https://github.com/user-attachments/assets/ce1b534f-fd1c-41c2-b03d-1208969a9d47
 
-
-
-Code will be released after the paper is accepted.
+The code will be released after the paper is accepted.
