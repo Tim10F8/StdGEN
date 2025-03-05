@@ -4,7 +4,7 @@
 # StdGEN: Semantic-Decomposed 3D Character Generation from Single Images
 
 <p align="center">
-    📃 <a href="https://arxiv.org/abs/2411.05738" target="_blank">Paper</a> • 🌐 <a href="https://stdgen.github.io/" target="_blank">Project Page</a> • 🤗 <a href="#" target="_blank">HF Repo</a>
+    📃 <a href="https://arxiv.org/abs/2411.05738" target="_blank">Paper</a> • 🌐 <a href="https://stdgen.github.io/" target="_blank">Project Page</a> • 🤗 <a href="https://huggingface.co/hyz317/StdGEN" target="_blank">HF Repo</a>
 </p>
 
 https://github.com/user-attachments/assets/ce1b534f-fd1c-41c2-b03d-1208969a9d47
@@ -44,7 +44,7 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
 pip install -r requirements.txt
 ```
 
-Download pretrained weights from our 🤗 Huggingface repo (<a>download here</a>) and [ViT-H SAM model](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth), place the files in the `./ckpt/` directory.
+Download pretrained weights from our 🤗 Huggingface repo (<a href="https://huggingface.co/hyz317/StdGEN">download here</a>) and [ViT-H SAM model](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth), place the files in the `./ckpt/` directory.
 
 
 
