@@ -3,13 +3,15 @@
 
 # StdGEN: Semantic-Decomposed 3D Character Generation from Single Images
 
-<p align="center">
-    📃 <a href="https://arxiv.org/abs/2411.05738" target="_blank">Paper</a> • 🌐 <a href="https://stdgen.github.io/" target="_blank">Project Page</a> • 🤗 <a href="https://huggingface.co/hyz317/StdGEN" target="_blank">HF Repo</a>
-</p>
+<a href="https://stdgen.github.io/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>&ensp;<a href="https://arxiv.org/abs/2411.05738"><img src="https://img.shields.io/badge/ArXiv-2412.15200-brightgreen"></a>&ensp;<a href="https://huggingface.co/hyz317/StdGEN"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>&ensp;<a href="https://huggingface.co/spaces/hyz317/StdGEN"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a><br>
+
+
 
 https://github.com/user-attachments/assets/ce1b534f-fd1c-41c2-b03d-1208969a9d47
 
 ## 🔥 Updates
+
+**[2025/03/17]** Online HuggingFace Gradio demo is released!
 
 **[2025/03/04]** Inference code, dataset, pretrained checkpoints are released!
 
