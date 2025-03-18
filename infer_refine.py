@@ -304,7 +304,7 @@ if __name__ == '__main__':
                     pass
 
                 os.makedirs(f'{args.output_dir}/{test_idx}', exist_ok=True)
-                save_py3dmesh_with_trimesh_fast(new_mesh, f'{args.output_dir}/{test_idx}/out_{level}.glb', apply_sRGB_to_LinearRGB=False)
+                save_py3dmesh_with_trimesh_fast(new_mesh, f'{args.output_dir}/{test_idx}/out_{level}.glb', apply_sRGB_to_LinearRGB=True)
 
                 if fixed_v is None:
                     fixed_v, fixed_f = simp_v, simp_f
@@ -350,4 +350,4 @@ if __name__ == '__main__':
             new_mesh, _, _ = geo_refine(mesh_v, mesh_f, colors, normals, no_decompose=True, expansion_weight=0.)
 
             os.makedirs(f'{args.output_dir}/{test_idx}', exist_ok=True)
-            save_py3dmesh_with_trimesh_fast(new_mesh, f'{args.output_dir}/{test_idx}/out_nodecomp.glb', apply_sRGB_to_LinearRGB=False)
+            save_py3dmesh_with_trimesh_fast(new_mesh, f'{args.output_dir}/{test_idx}/out_nodecomp.glb', apply_sRGB_to_LinearRGB=True)
