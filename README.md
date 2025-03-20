@@ -2,6 +2,7 @@
 <p align="center"><img src="https://stdgen.github.io/static/images/teaser.png" width="100%"></p>
 
 # StdGEN: Semantic-Decomposed 3D Character Generation from Single Images
+*"Std" stands for [S]eman[t]ic-[D]ecomposed, also inspired by the "std" namespace in C++ for standardization.*
 
 <a href="https://stdgen.github.io/"><img src="https://img.shields.io/static/v1?label=Project%20Page&message=Github&color=blue&logo=github-pages"></a>&ensp;<a href="https://arxiv.org/abs/2411.05738"><img src="https://img.shields.io/badge/ArXiv-2411.05738-brightgreen"></a>&ensp;<a href="https://huggingface.co/hyz317/StdGEN"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Model_Card-Huggingface-orange"></a>&ensp;<a href="https://huggingface.co/spaces/hyz317/StdGEN"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a><br>
 
