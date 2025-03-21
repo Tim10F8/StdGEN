@@ -198,7 +198,7 @@ def main(
 
     for path in tqdm(img_paths):
         img_input = Image.open(path)
-        if np.array(img_input)[..., 3].min() == 255:
+        if np.array(img_input).shape[-1] == 4 and np.array(img_input)[..., 3].min() == 255:
             # convert to RGB
             img_input = img_input.convert("RGB")
         img_output = canonicalize(img_input, width_input, height_input, seed, timestep)
