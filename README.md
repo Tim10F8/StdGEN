@@ -78,6 +78,8 @@ python infer_refine.py --input_mv_dir result/multiview --input_obj_dir ./result/
 ### Tips
 
 - The script `infer_canonicalize.py` automatically determines whether to use `rm_anime_bg` for background removal based on the alpha channel.
+- `rm_anime_bg` may not perform as effectively for other styles like 2.5D or real-world images, and the background can significantly impact the results if it isn't entirely removed. You can try using other background removal tools (e.g. Clipdrop or Google's multimodal flash model) before uploading the image.
+- Currently our training data consists of full-body images, so inputting half-body photos (e.g., missing feet or legs) may lead to suboptimal results. You can try to use image uncropping tools (e.g. Clipdrop) to get a full-body prediction.
 - After running `infer_canonicalize.py`, you can modify the A-pose character images in `result/apose` to achieve more desirable outcomes.
 - The refinement of the hair section partially depends on the hair mask prediction. Check the results in `result/refined/CASE_NAME/distract_mask.png` to decide whether to adjust the `--outside_ratio` parameter (default is 0.20). If the mask includes unwanted information, decrease the value; otherwise, increase it.
 - If the results are not satisfactory, try experimenting with different seeds.
