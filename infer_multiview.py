@@ -11,7 +11,6 @@ from pathlib import Path
 from dataclasses import dataclass
 from typing import Dict
 import torch
-import torch.nn.functional as F
 import torch.utils.checkpoint
 import torchvision.transforms.functional as TF
 from torch.utils.data import Dataset, DataLoader
@@ -167,7 +166,7 @@ def run_multiview_infer(dataloader, pipeline, cfg: TestConfig, save_dir, num_lev
     if cfg.seed is None:
         generator = None
     else:
-        generator = torch.Generator(device=pipeline.unet.device).manual_seed(cfg.seed)
+        generator = torch.Generator(device="cuda" if torch.cuda.is_available else "cpu").manual_seed(cfg.seed)
     
     images_cond = []
     for _, batch in tqdm(enumerate(dataloader)):
@@ -229,6 +228,8 @@ def load_multiview_pipeline(cfg):
     pipeline.unet.enable_xformers_memory_efficient_attention()
     if torch.cuda.is_available():
         pipeline.to(device)
+        pipeline.enable_model_cpu_offload()
+        pipeline.enable_vae_slicing()
     return pipeline
 
 def main(
@@ -247,7 +248,7 @@ def main(
     image_transforms = transforms.Compose(image_transforms)
     dataset = SingleImageData(image_transforms=image_transforms, input_dir=cfg.input_dir, total_views=cfg.num_views)
     dataloader = torch.utils.data.DataLoader(
-        dataset, batch_size=1, shuffle=False, num_workers=1
+        dataset, batch_size=1, shuffle=False
     )
     os.makedirs(cfg.output_dir, exist_ok=True)
 
