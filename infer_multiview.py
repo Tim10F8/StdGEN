@@ -228,8 +228,10 @@ def load_multiview_pipeline(cfg):
     pipeline.unet.enable_xformers_memory_efficient_attention()
     if torch.cuda.is_available():
         pipeline.to(device)
-        pipeline.enable_model_cpu_offload()
-        pipeline.enable_vae_slicing()
+        if cfg.low_vram:
+            print("Using Model CPU Offload and VAE Slicing to save VRAM Usage.")
+            pipeline.enable_model_cpu_offload()
+            pipeline.enable_vae_slicing()
     return pipeline
 
 def main(
@@ -266,6 +268,7 @@ if __name__ == '__main__':
     parser.add_argument("--width", type=int, default=576)
     parser.add_argument("--input_dir", type=str, default='./result/apose')
     parser.add_argument("--output_dir", type=str, default='./result/multiview')
+    parser.add_argument("--low_vram", action='store_true')
     cfg = parser.parse_args()
 
     if cfg.num_views == 6:
